@@ -7,6 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System;
+
+using System.Windows.Forms;
+
+using System.Media;
 //2020 nov Ashton kunder
 namespace cash
 {
@@ -15,13 +21,13 @@ namespace cash
         double friescost = 2.00;
         double drinkscost = 1.00;
         double tax = 0.13;
+        SoundPlayer player = new SoundPlayer(Properties.Resources.print);
 
-        
-      
+
 
         //double totalburgers = Convert.ToInt32(burgernumber.Text);
-       // double totalfries = Convert.ToInt32(friesnumber.Text);
-       // double totaldrinks = Convert.ToInt32(drinksnumber.Text);
+        // double totalfries = Convert.ToInt32(friesnumber.Text);
+        // double totaldrinks = Convert.ToInt32(drinksnumber.Text);
         public Form1()
         {
             InitializeComponent();
@@ -62,18 +68,43 @@ namespace cash
             double friestotal = (fries * friescost);
             double drinkstotal = (drinks * drinkscost);
             //text
+            player.Play();
             label.Text = "big belly burger";
-            
 
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
             ordernumber.Text = "order number 244";
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
             date.Text = "dec 21 2020";
+            player.Play();
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
             burgertext.Text = "burgers " + "  " + burgers + "     $" + burgerstotal + "$";
-             friestext1.Text = "fries" + "      " + fries + "     $" + friestotal +"$";
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
+            friestext1.Text = "fries" + "      " + fries + "     $" + friestotal +"$";
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
             drinkstext1.Text = "drinks" + "    " + drinks + "     $" + drinkstotal +"$";
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
             subtext.Text = "subtotal" + "         $" + totalfood;
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
             taxtext.Text = "tax" +"         $" + totaltax;
+            this.Refresh();
+            Thread.Sleep(500);
+            player.Play();
             totaltext.Text= "total"+"         $" + totalall;
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
 
 
